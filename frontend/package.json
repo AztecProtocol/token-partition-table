@@ -1,0 +1,37 @@
+{
+  "name": "aztec-token-pt-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "generate-artifacts": "cd ../aztec-token-partition-table && yarn compile && yarn codegen",
+    "copy-artifacts": "node src/scripts/copy-artifacts.mjs",
+    "get-artifacts": "npm run generate-artifacts && npm run copy-artifacts",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@aztec/accounts": "0.32.0",
+    "@aztec/aztec.js": "0.32.0",
+    "@aztec/circuits.js": "0.32.0",
+    "@aztec/merkle-tree": "0.32.0",
+    "classnames": "^2.5.1",
+    "next": "14.1.4",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/memdown": "^3.0.5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "copy-webpack-plugin": "^12.0.2",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.4",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  }
+}
